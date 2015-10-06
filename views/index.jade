@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  h2(style='color: red;') This is the working test
+  script(type='text/javascript').
+    if(true) {
+      console.log('it works', ' and now it crashes', ' and now it works again');
+    }
