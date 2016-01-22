@@ -1,10 +1,60 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  h2(style='color: red;') This is the working test
-  script(type='text/javascript').
-    if(true) {
-      console.log('it works', ' and now it crashes', ' and now it works again');
+
+  style(type='text/css').
+    .demo-layout-transparent {
+      background: url('http://www.getmdl.io/assets/demos/transparent.jpg') center / cover;
     }
+    .demo-layout-transparent .mdl-layout__header,
+    .demo-layout-transparent .mdl-layout__drawer-button {
+      /* This background is dark, so we set text to white. Use 87% black instead if
+         your background is light. */
+      color: white;
+    }
+
+  .demo-layout-transparent.mdl-layout.mdl-js-layout
+    header.mdl-layout__header.mdl-layout__header--transparent
+      .mdl-layout__header-row
+        //- <!-- Title -->
+        span.mdl-layout-title Resurse pentru NodeJS
+        //- <!-- Add spacer, to align navigation to the right -->
+        .mdl-layout-spacer
+        //- <!-- Navigation -->
+        nav.mdl-navigation
+          a.mdl-navigation__link(href="https://nodejs.org/api/" target='_blank') NodeJS API
+          a.mdl-navigation__link(href="https://www.npmjs.com/", target='_blank') NPM aka Node Package Manager
+          a.mdl-navigation__link(href="http://www.getmdl.io/components/index.html#layout-section", target='_blank') Material Design components
+          a.mdl-navigation__link(href="http://jade-lang.com/reference/conditionals/", target='_blank') Jade Referinta
+    div.mdl-layout__drawer
+      span.mdl-layout-title Resurse pentru NodeJS
+      nav.mdl-navigation
+        a.mdl-navigation__link(href="https://nodejs.org/api/", target='_blank') NodeJS API
+        a.mdl-navigation__link(href="https://www.npmjs.com/", target='_blank') NPM aka Node Package Manager
+        a.mdl-navigation__link(href="http://www.getmdl.io/components/index.html#layout-section", target='_blank') Material Design components
+        a.mdl-navigation__link(href="http://jade-lang.com/reference/conditionals/", target='_blank') Jade Referinta
+    main.mdl-layout__content
+
+
+
+    style(type='text/css').
+      .demo-card-square.mdl-card {
+        width: 320px;
+        height: 320px;
+      }
+      .demo-card-square > .mdl-card__title {
+        color: #fff;
+        background:
+          url('http://www.getmdl.io/assets/demos/dog.png') bottom right 15% no-repeat #46B6AC;
+      }
+
+    .demo-card-square.mdl-card.mdl-shadow--2dp
+      .mdl-card__title.mdl-card--expand
+        h2.mdl-card__title-text Invata NodeJS
+      .mdl-card__supporting-text Node’s philosophy is to give you low-level access to the event loop and to
+        | system resources. Or, in the words of core committer Felix Geisendörfer, in
+        | Node “everything runs in parallel except your code.”
+      .mdl-card__actions.mdl-card--border
+        a.mdl-button.mdl-button--colored.mdl-js-button.mdl-js-ripple-effect(href='https://nodejs.org/api/', target='_blank') 
+          | Invata acum NodeJS
+

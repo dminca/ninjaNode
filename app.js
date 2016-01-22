@@ -21,8 +21,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(require('less-middleware')(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, './node_modules/material-design-lite/'))); // load CSS, JS & favicon
 
+// define routes here
 app.use('/', routes);
 app.use('/users', users);
 
