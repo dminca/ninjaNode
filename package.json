@@ -1,5 +1,5 @@
 {
-  "name": "untitled",
+  "name": "ninjaNode",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -12,6 +12,7 @@
     "express": "~4.13.1",
     "jade": "~1.11.0",
     "less-middleware": "1.0.x",
+    "material-design-lite": "^1.0.6",
     "morgan": "~1.6.1",
     "serve-favicon": "~2.3.0"
   }
